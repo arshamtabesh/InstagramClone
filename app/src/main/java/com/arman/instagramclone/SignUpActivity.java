@@ -2,6 +2,7 @@ package com.arman.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         edtKickPower = findViewById(R.id.edtKickPower);
 
         txtGetData = findViewById(R.id.txtGetData);
-        btnTransition.findViewById(R.id.btnTransition);
+        btnTransition = findViewById(R.id.btnTransition);
 
         btnSave.setOnClickListener(SignUpActivity.this);
         txtGetData.setOnClickListener(SignUpActivity.this);
@@ -100,6 +101,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void btnSwitchTapped(View v){
-
+        Intent mIntent = new Intent(SignUpActivity.this, SignUpLoginActivity.class);
+        startActivity(mIntent);
     }
 }
