@@ -21,7 +21,7 @@ import java.util.List;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnSave;
+    private Button btnSave, btnTransition;
     private EditText edtName, edtPunchSpeed, edtPunchPower, edtKickSpeed, edtKickPower;
     private TextView txtGetData;
 
@@ -38,15 +38,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         edtKickPower = findViewById(R.id.edtKickPower);
 
         txtGetData = findViewById(R.id.txtGetData);
+        btnTransition.findViewById(R.id.btnTransition);
 
         btnSave.setOnClickListener(SignUpActivity.this);
         txtGetData.setOnClickListener(SignUpActivity.this);
 
     }
 
-    public void tapped(View view) {
-
-    }
 
     @Override
     public void onClick(View v) {
@@ -69,6 +67,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             });
         } else if (v.getId() == R.id.txtGetData) {
             ParseQuery<ParseObject> mParseQuery = ParseQuery.getQuery("KickBoxer");
+            mParseQuery.whereGreaterThan("punchPower",1000);
+            mParseQuery.setLimit(1);
             mParseQuery.findInBackground(new FindCallback<ParseObject>() {
                 @Override
                 public void done(List<ParseObject> objects, ParseException e) {
@@ -97,5 +97,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 }
             });
         }
+    }
+
+    public void btnSwitchTapped(View v){
+
     }
 }
