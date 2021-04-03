@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:onClick="rootLayoutTapped"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722"
-    tools:context=".SignUpActivity">
+    android:background="#DD3CB5"
+    android:onClick="rootLayoutTappedLogin"
+    tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/edSLEmail"
+        android:id="@+id/edLoginEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
@@ -23,58 +24,46 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/edSLUsername"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:ems="10"
-        android:hint="Please enter an Username"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edSLEmail" />
-
-    <EditText
-        android:id="@+id/edSLPassword"
+        android:id="@+id/edLoginPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
         android:ems="10"
         android:hint="Please enter an Password"
         android:inputType="textPassword"
+
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edSLUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/edLoginEmail" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnSignUpLoginActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="sign up"
         android:textSize="20sp"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#FFC107"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edSLPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginActivity" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLoginActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="LOG IN"
         android:textSize="20sp"
-        app:backgroundTint="#CDDC39"
+        app:backgroundTint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/edLoginPassword" />
 
     <ImageView
         android:id="@+id/imageView5"
