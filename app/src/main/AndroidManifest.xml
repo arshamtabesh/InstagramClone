@@ -12,6 +12,7 @@
         android:theme="@style/Theme.InstagramClone">
         <activity
             android:name=".SocialMediaActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
